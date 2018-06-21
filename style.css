@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css?family=Russo+One");
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+@font-face {
+  font-family: RussoOne;
+  src: url(RussoOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: Oswald;
+  src: url(Oswald-Regular.ttf);
+}
+
+@font-face {
+  font-family: Fontawesome;
+  src: url(fontawesome-webfont.ttf);
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  max-width: 940px;
+  margin: 0 auto 0 auto;
+  padding: 0 42px 0 42px;
+}
+
+header {
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    width: 90%;
+    padding: 0 5% 0 5%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-family: "Russo One", sans-serif;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 3.43rem;
+}
+
+h3 {
+  font-size: 1.71rem;
+}
+
+p {
+  font-family: Oswald;
+  font-size: 1.35rem;
+}
+
+.icon-title {
+  font-size: 1.57rem;
+  margin-left: 0.71rem;
+}
+
+/* блок стилей для звезд */
+
+.hider {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1024px) {
+  .hider {
+    -webkit-mask: url("img/opacity-mask.png");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-position: right;
+  }
+}
+
+.stars {
+  margin-top: 15px;
+  width: 910px;
+  padding: 0 15px 0 15px;
+  /* настройки flex-box */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.star-container {
+  display: block;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  color: black;
+  text-transform: uppercase;
+}
+
+.star,
+.bg-star {
+  width: 100%;
+  height: 100%;
+}
+
+.star-container:hover .bg-star {
+  -webkit-filter: blur(10px);
+  opacity: 0.5;
+}
+
+.star-container:hover h3 {
+  bottom: 0px;
+  opacity: 1;
+}
+
+.star {
+  -webkit-mask: url("img/star-mask.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 95.105% 90.45%;
+  -webkit-mask-position: center top;
+  position: absolute;
+}
+
+.bg-star {
+  position: absolute;
+  transition: all 0.4s;
+  border-radius: 50%;
+}
+
+.star-container h3 {
+  position: absolute;
+  padding: 5px 0 5px 0;
+  bottom: -100px;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  transition: all 0.4s;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* конец блока про звезд */
+
+#world-stars {
+  margin-bottom: 50px;
+}
+
+.fas {
+  font-size: 1.75rem;
+}
+
+.cover {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cover-container {
+  margin-bottom: 50px;
+  width: 250px;
+  height: 370px;
+  position: relative;
+  display: block;
+}
+
+.cover-img {
+  width: 250px;
+  position: absolute;
+  z-index: 100;
+}
+
+.cover-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.cover-gram {
+  position: absolute;
+  height: 250px;
+}
+
+.cover-container a:hover .cover-gram {
+  transform: translateX(6rem);
+  transition: all 0.4s;
+}
+
+.rating {
+  background: url("rating.png") no-repeat;
+  height: 1.2rem;
+  width: 100px;
+  margin: auto;
+  background-position: 0 -18px;
+}
+
+.cover-container {
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 745px) {
+  html {
+    font-size: 12px;
+  }
+  .cover-img {
+    max-width: 180px;
+  }
+  .cover-container {
+    max-width: 180px;
+    max-height: 280px;
+    margin-right: 15px;
+  }
+  .cover-info {
+    height: 95px;
+  }
+  p {
+    margin-top: -10px;
+  }
+  .cover-gram {
+    max-width: 180px;
+    top: -35px;
+  }
+  .cover-container a:hover {
+    transform: translateX(6rem);
+    transition: all 0.4s;
+  }
+  .cover {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 10px;
+  }
+  .cover-container {
+    width: 300px;
+    margin: 0;
+  }
+  .cover-image {
+    width: 300px;
+    height: 1000px;
+  }
+  .cover {
+    justify-content: center;
+  }
+}
